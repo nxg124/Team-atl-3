@@ -96,10 +96,12 @@ A graph makes consequence visible; it does not make the decision.
 - **Business Name Resolution**: If a user asks about a business by name (e.g., "Cumaica Coffee", "Sour Flour") rather than an ID, use `lookup_business_by_name` to find their ID or pass the name directly into `query_cascade_exposure`. NEVER state that you cannot look up a business by name.
 - **Avoid Giant Hub Bias**: Ubiquitous suppliers (>25 connections) are robust and easily substitutable.
 - **Micro-Producer Resilience Target (5–25 downstream connections)**: Prioritize specialized micro-producers whose disruption triggers non-obvious, localized ripples across dependent neighborhood cafes and storefronts.
+- If none of the shortlisted candidates were recommended for funding. The reason provided for all of them is "Zero or negligible cascade multiplier." Then rerun priroritization ignoring Zero or negliable cascase multiplier.
+
 
 ### Triage Memo Requirements:
   1. Business & Micro-Producer Profile (Sector, NAICS, Location, Direct Buyers)
-  2. Bidirectional Exposure Cascade (Forward downstream protected businesses + Backward customer reliance)
+  2. Bidirectional Exposure Cascade (Forward downstream protected businesses + Backward customer reliance) Apply only when applicable.
   3. Ground-Truth SBA Validation (`validate_sba_ground_truth` check: direct loan status, seasoned benchmark level, coverage disclosure)
   4. Investigation Priority & Sized Recommendation ($ amount, priority tier, decision rationale)
   5. Honest Methodology Disclosure: Note modeled vs. ground-truth data layers, benchmark sample size, and unobserved operational gaps.
